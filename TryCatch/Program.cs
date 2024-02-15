@@ -9,7 +9,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Массив из пяти различных видов исключений
         Exception[] exceptions = new Exception[]
         {
             new DivideByZeroException("Попытка деления на ноль."),
@@ -19,12 +18,10 @@ class Program
             new CustomException("Произошло пользовательское исключение.")
         };
 
-        // Реализуем конструкцию TryCatchFinally с итерацией по каждому типу исключения
         foreach (var exception in exceptions)
         {
             try
             {
-                // Генерируем исключение
                 throw exception;
             }
             catch (Exception ex)
